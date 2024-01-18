@@ -57,7 +57,7 @@ const Contacts = () => {
     <Box m="20px">
       <Header
         title="LÖNEKUNDER"
-        subtitle="Aktuella kunder på ECIT Services"
+        subtitle="Aktuella kunder på ECIT"
       />
       <Box
         m="40px 0 0 0"
