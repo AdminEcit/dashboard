@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled",
+                "ssl": false
+            },
+            "previewLimit": 50,
+            "server": "ecit-kunder.chekue84cr7p.eu-north-1.rds.amazonaws.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "Uppstarter",
+            "database": "uppstarter",
+            "username": "admin",
+            "askForPassword": true
+        }
+    ]
+}
