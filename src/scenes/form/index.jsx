@@ -25,26 +25,27 @@ const Form = () => {
 
     const handleFormSubmit = async (values, { resetForm }) => {
         console.log("Submitting form", values);
-        fetch("http://localhost:3001/addKund", {
+        fetch("http://ec2-13-60-15-157.eu-north-1.compute.amazonaws.com:3001/addKund", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify(values),
         })
-            .then((response) => response.json())
-            .then((data) => {
-                console.log("Data saved:", data);
-                setConfirmationMessage("Client added successfully");
-                setOpenDialog(true);
-                resetForm(); // Reset the form's values after successful submission
-            })
-            .catch((error) => {
-                console.error("Error saving data:", error);
-                setConfirmationMessage("Error saving data");
-                setOpenDialog(true);
-            });
+        .then((response) => response.json())
+        .then((data) => {
+            console.log("Data saved:", data);
+            setConfirmationMessage("Client added successfully");
+            setOpenDialog(true);
+            resetForm(); // Reset the form's values after successful submission
+        })
+        .catch((error) => {
+            console.error("Error saving data:", error);
+            setConfirmationMessage("Error saving data");
+            setOpenDialog(true);
+        });
     };
+    
 
     const initialValues = {
         Kundnamn: "",
